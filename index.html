@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f6fafb">
+<meta name="description" content="Nicole Xiao — Data Analyst portfolio. Two evidence-led New Zealand analytics projects spanning commercial tourism and public-sector education. SQL, Python, data quality and interactive dashboards.">
+<meta property="og:title" content="Nicole Xiao | Data Analytics Portfolio">
+<meta property="og:description" content="Evidence-led analysis. Practical insights. Explore Nicole Xiao's New Zealand tourism and education data analytics projects.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://baobao0517.github.io/">
+<title>Nicole Xiao | Data Analytics Portfolio</title>
+<style>
+:root{--navy:#132e40;--ink:#294658;--muted:#526c7b;--teal:#098c8b;--teal-dark:#076f70;--blue:#455ca1;--line:#dce7eb;--bg:#f6fafb;--white:#fff;--shadow:0 14px 38px rgba(24,54,72,.075)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--teal-dark);text-underline-offset:4px}a:focus-visible{outline:3px solid #0a9b99;outline-offset:4px}
+h1,h2,h3,p{margin:0}h1,h2,h3{color:var(--navy);letter-spacing:-.042em}
+.container{width:min(1160px,calc(100% - 52px));margin:0 auto}
+.header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.header .container{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:var(--navy);display:flex;align-items:center;gap:11px;font-weight:830;text-decoration:none;line-height:1.2}
+.mark{display:grid;place-items:center;height:38px;width:38px;border-radius:12px;color:white;font-size:15px;letter-spacing:-.07em;background:linear-gradient(135deg,#0c5765,#16a799)}
+.brand small{display:block;font-size:10px;letter-spacing:.095em;text-transform:uppercase;color:#67808b;margin-top:3px}
+.nav{display:flex;gap:27px;align-items:center;flex-wrap:wrap}
+.nav a{font-size:13px;font-weight:730;text-decoration:none;color:#385465}
+.nav a:hover{color:var(--teal)}
+.nav .nav-pill{border:1px solid #ccdfdf;background:#edf7f5;padding:8px 15px;border-radius:999px;color:var(--teal-dark)}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid #d5e7e9;background:radial-gradient(ellipse at 90% 7%,#d8f3f0 0,transparent 44%),linear-gradient(115deg,#f2faf9 0%,#f7fbfc 58%,#ebf5f8 100%)}
+.hero .container{padding:88px 0 91px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(310px,.75fr);align-items:center;gap:62px}
+.eyebrow{font-size:11px;letter-spacing:.16em;font-weight:850;text-transform:uppercase;color:#147b82}
+.hero h1{font-size:clamp(44px,5.3vw,70px);line-height:1.075;margin:19px 0 22px;max-width:700px}
+.hero h1 span{color:var(--teal)}
+.lead{font-size:18px;line-height:1.72;color:#476474;max-width:660px}
+.actions{display:flex;align-items:center;gap:11px;flex-wrap:wrap;margin-top:29px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid #cbdfe2;background:white;color:var(--navy);border-radius:11px;padding:12px 17px;text-decoration:none;font-weight:780;font-size:13px;line-height:1.3;box-shadow:0 2px 10px #1536450a;transition:transform .16s,background .16s}
+.btn:hover{transform:translateY(-2px);background:#f6fbfb}
+.btn.dark{background:var(--navy);border-color:var(--navy);color:white}
+.btn.dark:hover{background:#23485b}
+.btn svg{width:15px;height:15px;flex:none}
+.hero-panel{border:1px solid #cfe3e5;border-radius:23px;padding:26px;background:#ffffffcf;box-shadow:var(--shadow)}
+.hero-panel .panel-kicker{font-weight:850;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#65808d;margin-bottom:18px}
+.sector{display:flex;align-items:center;gap:15px;border-radius:14px;border:1px solid #dceee9;background:#f0faf7;padding:16px;margin-top:10px}
+.sector.second{background:#f2f5fb;border-color:#e0e7f4}
+.sector-icon{flex:none;display:grid;place-items:center;width:45px;height:45px;border-radius:13px;background:white;color:#0d857e;font-size:24px}
+.sector.second .sector-icon{color:var(--blue)}
+.sector strong{display:block;font-size:15px;line-height:1.35;color:var(--navy)}
+.sector span{font-size:12px;color:#577381}
+.panel-foot{margin-top:21px;padding-top:18px;border-top:1px solid #dce9ec;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.panel-foot strong{color:var(--navy);font-size:22px;line-height:1}
+.panel-foot span{font-size:12px;color:#627e8a}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;position:relative;z-index:2;margin-top:-30px}
+.metric{border-radius:15px;border:1px solid var(--line);background:#fff;padding:22px 25px;box-shadow:var(--shadow)}
+.metric strong{font-size:27px;font-weight:850;color:var(--navy);letter-spacing:-.035em;display:block;line-height:1.2}
+.metric span{display:block;font-size:12px;font-weight:720;color:#5d7a87;margin-top:5px}
+section{scroll-margin-top:96px}
+.section-heading{padding:85px 0 27px;max-width:790px}
+.section-heading .eyebrow{margin-bottom:13px}
+.section-heading h2{font-size:clamp(31px,3.4vw,45px);line-height:1.17}
+.section-heading p{margin-top:14px;font-size:15px;color:var(--muted)}
+.project-list{display:grid;gap:25px}
+.project{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.project-copy{padding:37px 39px;display:flex;align-items:flex-start;flex-direction:column}
+.project-type{font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:850;color:var(--teal-dark);display:flex;align-items:center;gap:9px}
+.project-type:before{content:"";width:9px;height:9px;border-radius:50%;background:#16a89f}
+.project.education .project-type{color:var(--blue)}
+.project.education .project-type:before{background:#6b75c1}
+.project h3{font-size:clamp(28px,2.75vw,36px);line-height:1.14;margin:17px 0 15px}
+.project .description{font-size:14px;color:#526d7b;line-height:1.78}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}
+.tags span{font-size:11px;font-weight:730;color:#425d6d;background:#f0f5f6;border:1px solid #e4ecee;padding:5px 9px;border-radius:8px}
+.insight{font-size:13px;line-height:1.63;color:#305b5c;background:#f0faf7;border-left:3px solid #21a69f;border-radius:0 8px 8px 0;padding:14px 15px;margin-top:21px}
+.project.education .insight{background:#f1f4fa;color:#435574;border-left-color:#7480c5}
+.project .actions{margin-top:auto;padding-top:25px}
+.visual{min-width:0;min-height:414px;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(145deg,#e8f7f4,#edf5f8);border-left:1px solid #dbe9e9;padding:25px}
+.project.education .visual{background:linear-gradient(145deg,#eaf1fb,#e9f8f7)}
+.browser{overflow:hidden;border:1px solid #d6e5e9;background:white;border-radius:15px;box-shadow:0 12px 35px #1b45501d;transform:rotate(1deg)}
+.project.education .browser{transform:rotate(-1deg)}
+.browser-bar{height:34px;display:flex;justify-content:space-between;align-items:center;padding:0 14px;background:#faffff;border-bottom:1px solid #e6eeef;color:#66808b;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+.dots{display:flex;gap:5px}.dots i{width:7px;height:7px;border-radius:50%;background:#cbdce0;display:block}.dots i:first-child{background:#7fc7bd}
+.image-frame{height:268px;padding:13px;background:#fff;display:flex;align-items:center;justify-content:center}
+.image-frame img{display:block;max-width:100%;width:100%;height:100%;object-fit:contain}
+.project.education .image-frame{height:300px}
+.project.education .image-frame img{object-position:top center;object-fit:contain}
+.caption{font-size:12px;color:#577181;margin:18px 4px 0}
+.approach{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.approach article{background:white;border:1px solid var(--line);border-radius:17px;padding:27px;box-shadow:0 4px 20px #18374807}
+.approach .icon{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:#e8f6f5;color:var(--teal);font-size:22px;margin-bottom:18px}
+.approach h3{font-size:19px;margin:0 0 10px}
+.approach p{font-size:13px;color:#597384;line-height:1.76}
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:37px;align-items:center;background:linear-gradient(115deg,#193a4b,#21535d);border-radius:21px;color:#e1edf0;margin:89px 0 91px;padding:48px 51px}
+.about .eyebrow{color:#8ce2d8}
+.about h2{font-size:36px;line-height:1.17;color:white;margin:12px 0 17px}
+.about p{font-size:15px;line-height:1.77;color:#d1e0e4}
+.about .btn{margin-top:24px}
+.skills{display:flex;flex-wrap:wrap;gap:9px;align-content:center}
+.skills span{font-size:12px;font-weight:720;color:#e6f4f3;border:1px solid #93bdbb55;background:#ffffff10;padding:9px 12px;border-radius:9px}
+footer{border-top:1px solid var(--line);background:#fff;padding:27px 0;color:#68818e;font-size:12px}
+footer .container{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+footer a{color:#365769}
+@media(max-width:930px){.hero .container{grid-template-columns:1fr;gap:30px;padding:65px 0 79px}.hero-panel{max-width:580px}.project{grid-template-columns:1fr}.visual{min-height:0;border-left:0;border-top:1px solid var(--line)}.approach{grid-template-columns:repeat(3,minmax(0,1fr))}.about{grid-template-columns:1fr;gap:24px}}
+@media(max-width:620px){.container{width:min(100% - 34px,1160px)}.header .container{min-height:72px;flex-wrap:wrap;padding:11px 0}.nav{gap:14px}.nav a{font-size:12px}.nav .nav-pill{padding:5px 11px}.hero .container{padding:59px 0 72px}.hero h1{font-size:44px}.lead{font-size:16px}.metrics{grid-template-columns:1fr;gap:8px;margin-top:-20px}.metric{padding:14px 19px}.metric strong{font-size:24px}.section-heading{padding-top:65px}.project-copy{padding:26px 24px}.visual{padding:22px}.image-frame{height:190px}.project.education .image-frame{height:210px}.approach{grid-template-columns:1fr}.about{padding:32px 27px;margin:67px 0}.about h2{font-size:30px}.project h3{font-size:30px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="header">
+ <div class="container">
+  <a class="brand" href="#top" aria-label="Nicole Xiao — back to top"><span class="mark" aria-hidden="true">NX</span><span>Nicole Xiao<small>Data Analytics Portfolio</small></span></a>
+  <nav class="nav" aria-label="Main navigation"><a href="#projects">Projects</a><a href="#approach">How I work</a><a href="#about">About</a><a class="nav-pill" href="https://github.com/baobao0517" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav>
+ </div>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-title">
+ <div class="container">
+  <div>
+   <div class="eyebrow">Independent analytics work · New Zealand</div>
+   <h1 id="hero-title">From complex data to <span>clear decisions.</span></h1>
+   <p class="lead">Hi, I'm <strong>Nicole Xiao</strong>, a data analyst focused on turning complex business questions into reliable evidence, meaningful insights and practical next steps.</p>
+   <div class="actions"><a class="btn dark" href="#projects">Explore my projects <span aria-hidden="true">↗</span></a><a class="btn" href="https://github.com/baobao0517" target="_blank" rel="noopener noreferrer">View GitHub profile <span aria-hidden="true">↗</span></a></div>
+  </div>
+  <div class="hero-panel" aria-label="Portfolio focus areas">
+   <div class="panel-kicker">Two domains. One analytical approach.</div>
+   <div class="sector"><div class="sector-icon" aria-hidden="true">↗</div><div><strong>Commercial &amp; market insights</strong><span>Tourism · market segmentation · spend</span></div></div>
+   <div class="sector second"><div class="sector-icon" aria-hidden="true">◎</div><div><strong>Public-sector &amp; equity insights</strong><span>Education · regional gaps · outcomes</span></div></div>
+   <div class="panel-foot"><strong>Evidence → Insight → Action</strong><span>SQL + Python + validation</span></div>
+  </div>
+ </div>
+</section>
+<div class="container">
+ <div class="metrics" aria-label="Portfolio scope">
+  <div class="metric"><strong>2</strong><span>Published interactive analytics projects</span></div>
+  <div class="metric"><strong>3 markets</strong><span>Australia · China · United States</span></div>
+  <div class="metric"><strong>16 regions</strong><span>New Zealand Regional Councils</span></div>
+ </div>
+ <section id="projects" aria-labelledby="projects-heading">
+  <div class="section-heading"><div class="eyebrow">Selected work</div><h2 id="projects-heading">Two projects. Different sectors. The same commitment to evidence.</h2><p>Each portfolio project begins with a real decision question, uses official New Zealand data and makes analytical assumptions and limitations visible.</p></div>
+  <div class="project-list">
+   <article class="project tourism">
+    <div class="project-copy">
+     <div class="project-type">Project 01 · Commercial analytics</div>
+     <h3>NZ Tourism Commercial Insights</h3>
+     <p class="description">How could New Zealand tourism businesses better understand visitors from <strong>Australia, China and the United States</strong>? Survey-weighted International Visitor Survey analysis explores visitor purpose, spending patterns and first-time versus repeat visitation.</p>
+     <div class="tags"><span>Python</span><span>SQL</span><span>Survey weights</span><span>Market segmentation</span><span>MBIE IVS</span></div>
+     <p class="insight"><strong>Decision lens:</strong> Market size alone is not enough. Visitor motivations, stay patterns and spending profiles suggest different commercial hypotheses to test.</p>
+     <div class="actions">
+      <a class="btn dark" href="https://baobao0517.github.io/nz-tourism-commercial-insights/" target="_blank" rel="noopener noreferrer">Explore live dashboard <span aria-hidden="true">↗</span></a>
+      <a class="btn" href="https://github.com/baobao0517/nz-tourism-commercial-insights" target="_blank" rel="noopener noreferrer">Source &amp; methods <span aria-hidden="true">↗</span></a>
+     </div>
+    </div>
+    <div class="visual">
+     <div class="browser"><div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Actual project chart</span></div><div class="image-frame"><img src="https://raw.githubusercontent.com/baobao0517/nz-tourism-commercial-insights/main/outputs/bubble_market_size_spend.svg" alt="Actual NZ Tourism Commercial Insights bubble chart comparing market size, visitor segments and spending." loading="lazy" width="1050" height="420"></div></div>
+     <p class="caption">Real project output · MBIE International Visitor Survey · Year ended June 2026</p>
+    </div>
+   </article>
+   <article class="project education">
+    <div class="project-copy">
+     <div class="project-type">Project 02 · Public-sector analytics</div>
+     <h3>NZ Education Participation &amp; Outcomes Insights</h3>
+     <p class="description">Where are gaps in <strong>regular attendance and NCEA Level 2+ attainment</strong> persisting across New Zealand regions and learner groups? An evidence-led comparison of 16 Regional Councils, historical trends and learner-group outcomes.</p>
+     <div class="tags"><span>Python</span><span>SQL</span><span>Data quality</span><span>Regional analysis</span><span>Education Counts</span></div>
+     <p class="insight"><strong>Decision lens:</strong> Persistent gaps in Gisborne, Northland and Waikato warrant investigation; contrasting cases such as Tasman and Taranaki require careful, non-causal interpretation.</p>
+     <div class="actions">
+      <a class="btn dark" href="https://baobao0517.github.io/nz-education-participation-outcomes/" target="_blank" rel="noopener noreferrer">Explore live dashboard <span aria-hidden="true">↗</span></a>
+      <a class="btn" href="https://github.com/baobao0517/nz-education-participation-outcomes" target="_blank" rel="noopener noreferrer">Source &amp; methods <span aria-hidden="true">↗</span></a>
+     </div>
+    </div>
+    <div class="visual">
+     <div class="browser"><div class="browser-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Actual dashboard preview</span></div><div class="image-frame"><img src="https://raw.githubusercontent.com/baobao0517/nz-education-participation-outcomes/main/docs/dashboard-preview.png" alt="Actual NZ Education Insights dashboard showing attendance, educational outcomes and region-level analysis." loading="lazy" width="1170" height="720"></div></div>
+     <p class="caption">Real project screenshot · Education Counts · Attendance 2022–2026 / NCEA 2019–2025</p>
+    </div>
+   </article>
+  </div>
+ </section>
+ <section id="approach" aria-labelledby="approach-heading">
+  <div class="section-heading"><div class="eyebrow">Analytical approach</div><h2 id="approach-heading">Work that holds up beyond the chart.</h2><p>My priority is not just a polished visualization. It is connecting stakeholder questions, reliable data and decisions while being transparent about uncertainty.</p></div>
+  <div class="approach">
+   <article><div class="icon" aria-hidden="true">01</div><h3>Frame the question</h3><p>Translate business or policy objectives into clear metrics, appropriate comparisons and a manageable scope.</p></article>
+   <article><div class="icon" aria-hidden="true">02</div><h3>Validate the data</h3><p>Check keys, denominators, source coverage, missingness, consistency and the limits of what the data represents.</p></article>
+   <article><div class="icon" aria-hidden="true">03</div><h3>Make insight actionable</h3><p>Compare segments and trends, distinguish evidence from hypotheses and recommend practical follow-up analysis.</p></article>
+  </div>
+ </section>
+ <section id="about" class="about" aria-labelledby="about-heading">
+  <div><div class="eyebrow">About Nicole</div><h2 id="about-heading">Analytical thinking shaped by business problems.</h2><p>I'm a New Zealand-based data analyst with experience in banking analytics, audit and enterprise BI, and a Master of Applied Data Science from the University of Canterbury. I bring together SQL, Python, data quality, stakeholder communication and decision-oriented analysis.</p><a class="btn" href="https://github.com/baobao0517" target="_blank" rel="noopener noreferrer">See all GitHub work <span aria-hidden="true">↗</span></a></div>
+  <div class="skills" aria-label="Relevant skills"><span>SQL</span><span>Python</span><span>SAS</span><span>Data Quality</span><span>ETL</span><span>BI &amp; Reporting</span><span>Stakeholder Collaboration</span><span>Commercial Analytics</span><span>Public-sector Insights</span><span>Reproducible Analysis</span></div>
+ </section>
+</div>
+</main>
+<footer><div class="container"><span>© 2026 Nicole Xiao · Independent analytics portfolio</span><span>Built with HTML &amp; CSS · <a href="https://github.com/baobao0517/baobao0517.github.io" target="_blank" rel="noopener noreferrer">Source on GitHub</a></span></div></footer>
+</body></html>
